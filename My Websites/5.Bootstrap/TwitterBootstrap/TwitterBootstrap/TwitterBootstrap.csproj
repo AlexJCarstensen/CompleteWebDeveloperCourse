@@ -90,8 +90,14 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Images\appstore.png" />
+    <Content Include="Images\mountain.jpg" />
     <Content Include="index1Grid.html" />
     <Content Include="index2Navbar.html" />
+    <Content Include="index3Glyphs.html" />
+    <Content Include="index4Modal.html" />
+    <Content Include="index5ScrollSpy.html" />
+    <Content Include="index6AppLanding.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
