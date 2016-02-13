@@ -2,7 +2,7 @@
 
 session_start();
 
-if($_GET["logout"]==1)
+if($_GET["logout"]==1 AND $_SESSION['id'])
 {
     session_destroy();
 
@@ -68,7 +68,7 @@ if($_POST['submit']=="Sign Up")
 if($_POST['submit']=="Log In")
 {
     $message = "";
-    $query = "SELECT * FROM users WHERE email='".mysqli_real_escape_string($link, $_POST['loginemail'])."'AND password='" .md5(md5($_POST['loginemail']).$_POST['loginpassword'])."' LIMIT 1";
+    $query = "SELECT * FROM users WHERE email='".mysqli_real_escape_string($link, $_POST['loginemail'])."'AND password='".md5(md5($_POST['loginemail']) .$_POST['loginpassword']). "'LIMIT 1";
 
     $result = mysqli_query($link, $query);
     $row = mysqli_fetch_array($result);

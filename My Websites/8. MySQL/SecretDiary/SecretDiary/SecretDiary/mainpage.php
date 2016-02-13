@@ -1,4 +1,4 @@
-<?php
+<?
 
 session_start();
 
@@ -12,9 +12,7 @@ $row = mysqli_fetch_array($result);
 
 $diary=$row['diary'];
 
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,27 +105,21 @@ $diary=$row['diary'];
                     </li>
 
                 </ul>
-
-
-
             </div>
         </div>
     </div>
 
     <div class="container contentContainer" id="topContainer">
-
         <div class="row">
 
             <div class="col-md-6 col-md-offset-3" id="topRow">
 
-
-
-                <textarea class="form-control">
-                    <?php echo $diary; ?>
+                <textarea class="form-control"><?php echo $diary; ?>
                 </textarea>
-
             </div>
+
         </div>
+
     </div>
 
 
