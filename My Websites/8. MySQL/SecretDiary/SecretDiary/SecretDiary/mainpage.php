@@ -1,4 +1,4 @@
-<?
+<?php
 
 session_start();
 
@@ -6,11 +6,10 @@ include("connection.php");
 
 $query="SELECT diary FROM users WHERE id='".$_SESSION['id']."' LIMIT 1";
 
-$result = mysqli_query($link,$query);
 
+$result = mysqli_query($link, $query);
 $row = mysqli_fetch_array($result);
-
-$diary=$row['diary'];
+$diary = $row['diary'];
 
 ?>
 
@@ -113,9 +112,7 @@ $diary=$row['diary'];
         <div class="row">
 
             <div class="col-md-6 col-md-offset-3" id="topRow">
-
-                <textarea class="form-control"><?php echo $diary; ?>
-                </textarea>
+                <textarea class="form-control"><?php echo $diary; ?></textarea>
             </div>
 
         </div>
@@ -139,7 +136,7 @@ $diary=$row['diary'];
 
         $("textarea").keyup(function () {
 
-            $.post("updatediary.php", { diary: $("textarea").val() });
+            $.post("updatediary.php", { diary:$("textarea").val()} );
 
         });
 
